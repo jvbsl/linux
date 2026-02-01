@@ -1594,15 +1594,6 @@
 	status = "okay";
 };
 
-&usb_1_dwc3 {
-	dr_mode = "otg";
-	usb-role-switch;
-	maximum-speed = "high-speed";
-	/* Remove USB3 phy */
-	phys = <&usb_1_hsphy>;
-	phy-names = "usb2-phy";
-};
-
 &usb_1_dwc3_hs {
 	remote-endpoint = <&pmic_glink_hs_in>;
 };
